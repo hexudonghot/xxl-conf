@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  	<title>配置管理中心</title>
+  	<title>模板管理中心</title>
   	<#import "../common/common.macro.ftl" as netCommon>
 	<@netCommon.commonStyle />
 	<!-- DataTables -->
@@ -38,7 +38,7 @@
 				                <thead>
 					            	<tr>
                                         <th>AppName</th>
-                                        <th>项目名称</th>
+                                        <th>马甲包名称</th>
 					                </tr>
 				                </thead>
                                 <tbody>

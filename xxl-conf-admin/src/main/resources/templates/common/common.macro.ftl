@@ -61,8 +61,8 @@
 <#macro commonHeader>
 	<header class="main-header">
 		<a href="${request.contextPath}/" class="logo">
-			<span class="logo-mini"><b>XXL</b></span>
-			<span class="logo-lg"><b>配置管理中心</b></span>
+			<span class="logo-mini"><b>PUSH</b></span>
+			<span class="logo-lg"><b>模板管理中心</b></span>
 		</a>
 		<nav class="navbar navbar-static-top" role="navigation">
 			<a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button"><span class="sr-only">切换导航</span></a>
@@ -70,23 +70,23 @@
 				<ul class="nav navbar-nav">
 
 					<#-- env -->
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-							当前环境：
-								<#list envList as item>
-									<#if XXL_CONF_CURRENT_ENV == item.env>
-										${item.title}(${item.env})
-									</#if>
-								</#list>
-							<span class="caret"></span>
-						</a>
-                        <ul class="dropdown-menu" role="menu">
-							<#list envList as item>
-								<li class="changeEnv" env="${item.env}" ><a href="javascript:;">${item.title}(${item.env})</a></li>
-							</#list>
-                            <#--<li class="divider"></li>-->
-                        </ul>
-                    </li>
+<#--                    <li class="dropdown">-->
+<#--                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">-->
+<#--							当前环境：-->
+<#--								<#list envList as item>-->
+<#--									<#if XXL_CONF_CURRENT_ENV == item.env>-->
+<#--										${item.title}(${item.env})-->
+<#--									</#if>-->
+<#--								</#list>-->
+<#--							<span class="caret"></span>-->
+<#--						</a>-->
+<#--                        <ul class="dropdown-menu" role="menu">-->
+<#--							<#list envList as item>-->
+<#--								<li class="changeEnv" env="${item.env}" ><a href="javascript:;">${item.title}(${item.env})</a></li>-->
+<#--							</#list>-->
+<#--                            &lt;#&ndash;<li class="divider"></li>&ndash;&gt;-->
+<#--                        </ul>-->
+<#--                    </li>-->
 
 					<#-- login user -->
                     <li class="dropdown">
@@ -142,13 +142,11 @@
 			<!-- sidebar menu: : style can be found in sidebar.less -->
 			<ul class="sidebar-menu">
 				<li class="header">导航</li>
-				<li class="nav-click <#if pageName == "conf">active</#if>" ><a href="${request.contextPath}/conf"><i class="fa fa-circle-o text-aqua"></i><span>配置管理</span></a></li>
+				<li class="nav-click <#if pageName == "conf">active</#if>" ><a href="${request.contextPath}/conf"><i class="fa fa-circle-o text-aqua"></i><span>模板管理</span></a></li>
 				<#if Request["XXL_CONF_LOGIN_IDENTITY"].permission == 1>
                     <li class="nav-click <#if pageName == "user">active</#if>" ><a href="${request.contextPath}/user"><i class="fa fa-circle-o text-green"></i><span>用户管理</span></a></li>
 					<li class="nav-click <#if pageName == "project">active</#if>" ><a href="${request.contextPath}/project"><i class="fa fa-circle-o text-yellow"></i><span>项目管理</span></a></li>
-					<li class="nav-click <#if pageName == "env">active</#if>" ><a href="${request.contextPath}/env"><i class="fa fa-circle-o text-blue"></i><span>环境管理</span></a></li>
 				</#if>
-                <li class="nav-click <#if pageName == "help">active</#if>" ><a href="${request.contextPath}/help"><i class="fa fa-circle-o text-gray"></i><span>使用教程</span></a></li>
 			</ul>
 		</section>
 		<!-- /.sidebar -->
